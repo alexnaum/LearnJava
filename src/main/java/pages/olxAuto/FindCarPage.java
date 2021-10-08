@@ -1,5 +1,6 @@
 package pages.olxAuto;
 
+import common.FiltersParam;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,7 +20,10 @@ public class FindCarPage extends BasePage{
 
     //private final By categoryFilter =  By.id("choosecat");
     @FindBy(id = "choosecat")
-    private WebElement categoryFilter;
+    public WebElement categoryFilter;
+
+    @FindBy(css = "#param_subcat span[data-default-label]")
+    public WebElement makerFilter;
 
     @FindBy(css = "#param_price input[class*='min-value-input']")
     private WebElement lowPrice;
@@ -48,7 +52,8 @@ public class FindCarPage extends BasePage{
         return this;
     }
     public List<WebElement> getListOfBrands(){
-        return driver.findElements(By.xpath("//li[@id=\"param_subcat\"]//ul/li/a[contains(@class,'search-choose') and not(contains(@class, 'counter'))]")).stream().toList();
+        waitElementIsVisible(driver.findElement(By.xpath("//*[@id='param_subcat']//*[@class='icon down abs']"))).click();
+        return driver.findElements(By.xpath("//li[@id=\"param_subcat\"]//ul/li/a[contains(@class,'search-choose') and not(contains(@class,'counter'))]")).stream().toList();
     }
 
     public void selectVehicle(int index){
@@ -64,8 +69,6 @@ public class FindCarPage extends BasePage{
     public List<WebElement> getListOfPrice(){
         return driver.findElements(By.cssSelector("td.offer .price strong")).stream().toList();
     }
-
-
 
     public FindCarPage setPrice(String lPrice, String hPrice){
         driver.findElement(By.cssSelector("li#param_price a.button-from")).click();
@@ -95,5 +98,12 @@ public class FindCarPage extends BasePage{
         maxMileage.clear();
         maxMileage.sendKeys(v);
         return this;
+    }
+
+    public String getMinFilterParameter(String param){
+        return waitElementIsVisible(driver.findElement(By.cssSelector("li#"+param+" a.button-from"))).getText();
+    }
+    public String getMaxFilterParameter(String param){
+        return waitElementIsVisible(driver.findElement(By.cssSelector("li#"+param+" a.button-to"))).getText();
     }
 }

@@ -5,11 +5,8 @@
     <classes>
       <class name="tests.auto.positive.FiltersTest">
         <methods>
-          <include name="checkPriceFields"/>
           <include name="setUp"/>
           <include name="filterByMileAge"/>
-          <include name="checkBrandInTheList"/>
-          <include name="closeExtraWindows"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- tests.auto.positive.FiltersTest -->

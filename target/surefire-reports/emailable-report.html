@@ -9,73 +9,18 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Command line suite</th></tr>
-<tr><td><a href="#t0">Command line test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">28,994</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Command line test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">101,121</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Command line suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">tests.auto.positive.FiltersTest</td><td><a href="#m0">checkBrandInTheList</a></td><td rowspan="1">1633517456900</td><td rowspan="1">5849</td></tr><tr class="failedeven"><td><a href="#m1">checkPriceFields</a></td><td rowspan="1">1633517464943</td><td rowspan="1">5207</td></tr><tr class="failedeven"><td><a href="#m2">filterByMileAge</a></td><td rowspan="1">1633517477888</td><td rowspan="1">5107</td></tr><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.auto.positive.FiltersTest</td><td><a href="#m3">defaultFiltersValues</a></td><td rowspan="1">1633517472074</td><td rowspan="1">3924</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Command line suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.auto.positive.FiltersTest</td><td><a href="#m0">filterByMileAge</a></td><td rowspan="1">1633604047719</td><td rowspan="1">13986</td></tr><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.auto.negative.FiltersTest</td><td><a href="#m1">filterByMileAge</a></td><td rowspan="1">1633603980825</td><td rowspan="1">14987</td></tr><tr class="passedodd"><td rowspan="4">tests.auto.positive.FiltersTest</td><td><a href="#m2">checkBrandInTheList</a></td><td rowspan="1">1633603998000</td><td rowspan="1">15466</td></tr><tr class="passedodd"><td><a href="#m3">checkPriceFields</a></td><td rowspan="1">1633604015401</td><td rowspan="1">13953</td></tr><tr class="passedodd"><td><a href="#m4">defaultFiltersValues</a></td><td rowspan="1">1633604031769</td><td rowspan="1">13520</td></tr><tr class="passedodd"><td><a href="#m5">sortingByPrice</a></td><td rowspan="1">1633604063761</td><td rowspan="1">14817</td></tr></tbody>
 </table>
-<h2>Command line test</h2><h3 id="m0">tests.auto.positive.FiltersTest#checkBrandInTheList</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a id=&quot;geo-suggestions-close&quot; href=&quot;#&quot; class=&quot;abs close&quot; data-icon=&quot;close&quot;&gt;&lt;/a&gt; is not clickable at point (877, 399). Other element would receive the click: &lt;iframe class=&quot;gtm-survey__iframe&quot; src=&quot;https://ru.surveymonkey.com/r/KQZ7SWR?business_status=undefined&quot;&gt;&lt;/iframe&gt;
-  (Session info: chrome=94.0.4606.71)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-R1OQVL4&apos;, ip: &apos;192.168.1.134&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\ONAUME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63991}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c23fcf99a523424683359ca436c4ba9b
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy10.click(Unknown Source)
-	at pages.BasePage.closeGeoSuggestions(BasePage.java:48)
-	at tests.auto.positive.FiltersTest.checkBrandInTheList(FiltersTest.java:31)
+<h2>Command line test</h2><h3 id="m0">tests.auto.positive.FiltersTest#filterByMileAge</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [70000 км] but found []
+	at tests.auto.positive.FiltersTest.filterByMileAge(FiltersTest.java:55)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 46 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.auto.positive.FiltersTest#checkPriceFields</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a id=&quot;geo-suggestions-close&quot; href=&quot;#&quot; class=&quot;abs close&quot; data-icon=&quot;close&quot;&gt;&lt;/a&gt; is not clickable at point (877, 399). Other element would receive the click: &lt;iframe class=&quot;gtm-survey__iframe&quot; src=&quot;https://ru.surveymonkey.com/r/KQZ7SWR?business_status=undefined&quot;&gt;&lt;/iframe&gt;
-  (Session info: chrome=94.0.4606.71)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-R1OQVL4&apos;, ip: &apos;192.168.1.134&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\ONAUME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53447}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 3f6852e2c539dab271de672fc2edb48c
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy10.click(Unknown Source)
-	at pages.BasePage.closeGeoSuggestions(BasePage.java:48)
-	at tests.auto.positive.FiltersTest.checkPriceFields(FiltersTest.java:40)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 46 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.auto.positive.FiltersTest#filterByMileAge</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a id=&quot;geo-suggestions-close&quot; href=&quot;#&quot; class=&quot;abs close&quot; data-icon=&quot;close&quot;&gt;&lt;/a&gt; is not clickable at point (877, 399). Other element would receive the click: &lt;iframe class=&quot;gtm-survey__iframe&quot; src=&quot;https://ru.surveymonkey.com/r/KQZ7SWR?business_status=undefined&quot;&gt;&lt;/iframe&gt;
-  (Session info: chrome=94.0.4606.71)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-R1OQVL4&apos;, ip: &apos;192.168.1.134&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\ONAUME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52330}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4c1d1633174b822827f0f0f1a0de6f56
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy10.click(Unknown Source)
-	at pages.BasePage.closeGeoSuggestions(BasePage.java:48)
-	at tests.auto.positive.FiltersTest.filterByMileAge(FiltersTest.java:48)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 46 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.auto.positive.FiltersTest#defaultFiltersValues</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 42 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.auto.negative.FiltersTest#filterByMileAge</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.auto.positive.FiltersTest#checkBrandInTheList</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.auto.positive.FiltersTest#checkPriceFields</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.auto.positive.FiltersTest#defaultFiltersValues</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.auto.positive.FiltersTest#sortingByPrice</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

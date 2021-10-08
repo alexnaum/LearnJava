@@ -1,16 +1,14 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.olxAuto.FindCarPage;
 
-import static environment_variables.Variables.TimeOutVariables.EXPLICIT_WAIT_TIME;
+import static environmentVariables.Variables.TimeOutVariables.EXPLICIT_WAIT_TIME;
 
 public class BasePage {
     protected WebDriver driver;
@@ -41,16 +39,18 @@ public class BasePage {
     {
         driver.get(url);
     }
-    //Question
+
     public BasePage closeCookieWindow(){
-        waitElementIsVisible(closeCookieButton).click();
-        //wait.until(ExpectedConditions.stalenessOf(driver.findElement(By.cssSelector("div#cookiesBar"))));
-        //new WebDriverWait(driver, EXPLICIT_WAIT_TIME).until(ExpectedConditions.stalenessOf(cookiesWindow));
+        if(driver.findElements(By.cssSelector("button.cookie-close")).stream().count()!=0) {
+            waitElementIsVisible(closeCookieButton).click();
+        }
         return this;
     }
 
     public BasePage closeGeoSuggestions(){
-        waitElementIsVisible(closeGeoSuggestionsButton).click();
+        if(driver.findElements(By.cssSelector("a#geo-suggestions-close")).stream().count()!=0) {
+            waitElementIsVisible(closeGeoSuggestionsButton).click();
+        }
         return this;
     }
 
