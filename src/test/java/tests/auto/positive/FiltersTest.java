@@ -3,9 +3,12 @@ package tests.auto.positive;
 import common.FiltersParam;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import tests.base.BaseTest;
+
+import java.util.stream.Collectors;
 
 import static environmentVariables.Variables.Urls.OLX_FIND_CAR_URL;
 
@@ -46,8 +49,8 @@ public class FiltersTest extends BaseTest {
     @Test
     public void sortingByPrice(){
         findCarPage.selectItemFormSortingList(3);
-        var sortedList = findCarPage.getListOfPrice().stream().sorted();
+        var sortedList = findCarPage.getListOfPrice();
 
-        System.out.println(sortedList);
+       Logger.info(sortedList);
     }
 }

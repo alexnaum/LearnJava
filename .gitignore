@@ -1,0 +1,9 @@
+/allure-results/
+.allure
+
+#IDEA Files
+.idea
+target
+*.iml
+*.ipr
+*.png

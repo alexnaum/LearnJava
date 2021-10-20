@@ -1,13 +1,40 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 102.133 sec <<< FAILURE!
-filterByMileAge(tests.auto.positive.FiltersTest)  Time elapsed: 13.993 sec  <<< FAILURE!
-java.lang.AssertionError: expected [70000 км] but found []
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:575)
-	at org.testng.Assert.assertEquals(Assert.java:585)
-	at tests.auto.positive.FiltersTest.filterByMileAge(FiltersTest.java:55)
+Tests run: 18, Failures: 6, Errors: 0, Skipped: 12, Time elapsed: 92.35 s <<< FAILURE! - in TestSuite
+tests.auto.negative.FiltersTest.filterByMileage[ABC](1)  Time elapsed: 10.707 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (6920366b9fc0c9e18ae64f391777642b)] -> css selector: #param_motor_mileage div.filter-item-from span.icon] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-R1OQVL4', ip: '192.168.1.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\ONAUME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60879}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6920366b9fc0c9e18ae64f391777642b
+	at tests.auto.negative.FiltersTest.filterByMileage(FiltersTest.java:29)
+
+tests.auto.negative.FiltersTest.filterByMileage[!@#](2)  Time elapsed: 1.616 s  <<< FAILURE!
+java.lang.AssertionError: expected [] but found [!@#]
+	at tests.auto.negative.FiltersTest.filterByMileage(FiltersTest.java:30)
+
+tests.auto.negative.FiltersTest.filterByMileage[1000.9](3)  Time elapsed: 1.742 s  <<< FAILURE!
+java.lang.AssertionError: expected [] but found [10009 км]
+	at tests.auto.negative.FiltersTest.filterByMileage(FiltersTest.java:30)
+
+tests.auto.negative.FiltersTest.filterByMileage[#A](4)  Time elapsed: 1.546 s  <<< FAILURE!
+java.lang.AssertionError: expected [] but found [#]
+	at tests.auto.negative.FiltersTest.filterByMileage(FiltersTest.java:30)
+
+tests.auto.negative.FiltersTest.filterByMileage[  ](5)  Time elapsed: 10.64 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (6920366b9fc0c9e18ae64f391777642b)] -> css selector: #param_motor_mileage div.filter-item-from span.icon] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-R1OQVL4', ip: '192.168.1.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\ONAUME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60879}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6920366b9fc0c9e18ae64f391777642b
+	at tests.auto.negative.FiltersTest.filterByMileage(FiltersTest.java:29)
+
+tests.auto.positive.FiltersTest.start  Time elapsed: 10.908 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "pages.BasePage.goToUrl(String)" because "this.basePage" is null
+	at tests.auto.positive.FiltersTest.start(FiltersTest.java:19)
 

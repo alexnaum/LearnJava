@@ -1,7 +1,10 @@
 package pages.olxAuto;
 
 import common.FiltersParam;
+import lombok.Getter;
+import lombok.Setter;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,7 +12,9 @@ import org.openqa.selenium.support.PageFactory;
 import pages.BasePage;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
+@Getter
 public class FindCarPage extends BasePage{
     //WebDriver driver;
     public FindCarPage(WebDriver driver) {
@@ -66,8 +71,9 @@ public class FindCarPage extends BasePage{
         return list.size();
     }
 
-    public List<WebElement> getListOfPrice(){
-        return driver.findElements(By.cssSelector("td.offer .price strong")).stream().toList();
+    public List<String> getListOfPrice(){
+        List<WebElement> list = driver.findElements(By.cssSelector("td.offer .price strong")).stream().toList();
+        return list.stream().map(w -> w.getText()).collect(Collectors.toList());
     }
 
     public FindCarPage setPrice(String lPrice, String hPrice){
@@ -90,6 +96,8 @@ public class FindCarPage extends BasePage{
         driver.findElement(By.cssSelector("li#param_motor_mileage a.button-from")).click();
         minMileage.clear();
         minMileage.sendKeys(v);
+        minMileage.sendKeys(Keys.ENTER);
+        waitElementIsVisible(driver.findElement(By.cssSelector("#param_motor_mileage div.filter-item-from span.icon")));
         return this;
     }
 
@@ -97,6 +105,8 @@ public class FindCarPage extends BasePage{
         driver.findElement(By.cssSelector("li#param_motor_mileage a.button-to")).click();
         maxMileage.clear();
         maxMileage.sendKeys(v);
+        maxMileage.sendKeys(Keys.ENTER);
+        waitElementIsVisible(driver.findElement(By.cssSelector("#param_motor_mileage div.filter-item-to span.icon")));
         return this;
     }
 

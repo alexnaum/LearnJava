@@ -2,9 +2,10 @@ pages\BasePage.class
 helpers\DriverHelpers.class
 common\DriverFactory.class
 environmentVariables\Variables$Urls.class
+common\Config.class
+environmentVariables\Variables$TimeOutVariables.class
 environmentVariables\Variables.class
 helpers\ElementsActionHelper.class
-common\Config.class
 pages\olxAuto\VehicleInfoPage.class
-environmentVariables\Variables$TimeOutVariables.class
 pages\olxAuto\FindCarPage.class
+common\FiltersParam.class
