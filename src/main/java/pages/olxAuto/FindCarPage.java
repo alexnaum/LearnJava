@@ -71,9 +71,10 @@ public class FindCarPage extends BasePage{
         return list.size();
     }
 
-    public List<String> getListOfPrice(){
-        List<WebElement> list = driver.findElements(By.cssSelector("td.offer .price strong")).stream().toList();
-        return list.stream().map(w -> w.getText()).collect(Collectors.toList());
+    public List<Integer> getListOfPrice(){
+        List<WebElement> list = driver.findElements(By.cssSelector("#offers_table td.offer .price strong")).stream().toList();
+        list.stream().map(w -> w.getText().replace(" ","").replace("грн.","")).collect(Collectors.toList());
+        return list.stream().map(n -> Integer.valueOf(String.valueOf(n))).collect(Collectors.toList());
     }
 
     public FindCarPage setPrice(String lPrice, String hPrice){

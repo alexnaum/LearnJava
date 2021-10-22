@@ -52,5 +52,6 @@ public class FiltersTest extends BaseTest {
         var sortedList = findCarPage.getListOfPrice();
 
        Logger.info(sortedList);
+
     }
 }
