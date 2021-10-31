@@ -1,6 +1,7 @@
 package pages.olxAuto;
 
 import common.FiltersParam;
+import io.qameta.allure.Step;
 import lombok.Getter;
 import lombok.Setter;
 import org.openqa.selenium.By;
@@ -61,6 +62,7 @@ public class FindCarPage extends BasePage{
         return driver.findElements(By.xpath("//li[@id=\"param_subcat\"]//ul/li/a[contains(@class,'search-choose') and not(contains(@class,'counter'))]")).stream().toList();
     }
 
+    @Step("Select vehicle")
     public void selectVehicle(int index){
         List<WebElement> list = driver.findElements(By.cssSelector("#offers_table h3 a")).stream().toList();
         list.get(index).click();
@@ -77,6 +79,7 @@ public class FindCarPage extends BasePage{
         return list.stream().map(n -> Integer.valueOf(String.valueOf(n))).collect(Collectors.toList());
     }
 
+    @Step("Set price")
     public FindCarPage setPrice(String lPrice, String hPrice){
         driver.findElement(By.cssSelector("li#param_price a.button-from")).click();
         lowPrice.clear();
@@ -87,12 +90,14 @@ public class FindCarPage extends BasePage{
         return this;
     }
 
+    @Step("Select brand")
     public FindCarPage selectBrand(){
       driver.findElement(By.xpath("//li[@id=\"param_subcat\"]//div[contains(@class, \"category-item\")]")).click();
       //driver.findElements(By)
         return this;
     }
 
+    @Step("Set mileage")
     public FindCarPage setMinMileAge(String v){
         driver.findElement(By.cssSelector("li#param_motor_mileage a.button-from")).click();
         minMileage.clear();
