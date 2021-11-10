@@ -1,1 +1,0 @@
-{"uuid":"706da0f5-b2bc-43b8-aa55-4ea0c6ace85c","name":"LearnJava","children":["f7ac21f1-fb7c-4e57-81db-c5e0eda16b8e"],"befores":[{"name":"closeExtraWindows","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1632216700046,"stop":1632216700052}],"afters":[],"links":[],"start":1632216700025,"stop":1632216705375}
