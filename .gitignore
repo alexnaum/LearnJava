@@ -259,4 +259,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+/allure-results
+/build
+
 # End of https://www.toptal.com/developers/gitignore/api/windows,java,intellij,test,maven
