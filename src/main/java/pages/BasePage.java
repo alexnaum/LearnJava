@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -35,6 +36,7 @@ public class BasePage {
     @FindBy(css = "div.gtm-survey__close")
     public  WebElement closeSurveyButton;
 
+    @Step("Go to URL {url}")
     public void goToUrl(String url)
     {
         driver.get(url);
