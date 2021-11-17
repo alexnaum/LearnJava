@@ -16,8 +16,8 @@ public class FiltersTest extends BaseTest {
     public void start(){
         basePage.goToUrl(OLX_FIND_CAR_URL);
         basePage.closeGtmSurveyWindow();
-        basePage.closeGeoSuggestions();
         basePage.closeCookieWindow();
+        basePage.closeGeoSuggestions();
     }
     @DataProvider(name  = "data-provider")
     public Object[][] dataProviderMethod(){

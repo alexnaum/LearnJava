@@ -3,11 +3,16 @@ package tests.auto.positive;
 import common.FiltersParam;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import tests.base.BaseTest;
 
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import static environmentVariables.Variables.Urls.OLX_FIND_CAR_URL;
@@ -18,8 +23,8 @@ public class FiltersTest extends BaseTest {
     public void start(){
         basePage.goToUrl(OLX_FIND_CAR_URL);
         basePage.closeGtmSurveyWindow();
-        basePage.closeGeoSuggestions();
         basePage.closeCookieWindow();
+        basePage.closeGeoSuggestions();
     }
 
     @Test
@@ -47,11 +52,17 @@ public class FiltersTest extends BaseTest {
     }
 
     @Test
-    public void sortingByPrice(){
+    public void sortingByPriceGeneralList() throws InterruptedException {
         findCarPage.selectItemFormSortingList(3);
-        var sortedList = findCarPage.getListOfPrice();
+        var sortedListSite = findCarPage.getGeneralListOfPrice()
+                .stream().map(e -> Integer.parseInt(e)).collect(Collectors.toList());
+        List<Integer> sortedListReal =  sortedListSite.stream().sorted(Comparator.reverseOrder()).toList();
+        Assert.assertTrue(sortedListSite.stream().allMatch(new HashSet<>(sortedListReal)::contains));
+    }
 
-       Logger.info(sortedList);
-
+    @AfterMethod
+    public void end(){
+        //TODO add name of the test to logger
+        logger.info("========END OF THE TEST===========");
     }
 }

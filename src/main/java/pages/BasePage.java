@@ -65,10 +65,18 @@ public class BasePage {
 
     public WebElement waitElementIsVisible(WebElement element)
     {
-        new WebDriverWait(driver, EXPLICIT_WAIT_TIME).until(ExpectedConditions.visibilityOf(element));
+        new WebDriverWait(driver, EXPLICIT_WAIT_TIME)
+                .until(ExpectedConditions.visibilityOf(element));
         return element;
     }
 
+    public WebElement waitElementIsInvisibilyty(WebElement element)
+    {
+        new WebDriverWait(driver, EXPLICIT_WAIT_TIME)
+                .until(ExpectedConditions.invisibilityOf(element));
+        return element;
+    }
+    //#listContainer > div.listOverlay
     public void selectCategory(String cat){
 
     }
